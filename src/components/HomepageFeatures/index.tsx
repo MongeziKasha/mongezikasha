@@ -5,48 +5,57 @@ import styles from './styles.module.css';
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  Svg: React.ComponentType<React.ComponentProps<'svg'>> | string;
+  isImage?: boolean;
   description: ReactNode;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Mongezi Kasha',
+    Svg: '/img/mypicture.jpg',
+    isImage: true,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Hi! I am Mongezi Kasha a Full-stack Software Engineer. I love
+        building things that make a difference. This is my personal blog where I
+        share my thoughts, experiences, and knowledge on software development,
+        technology, and life as a software engineer.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Industry Experience & Skills',
+    Svg: '/img/Indudtry.png',
+    isImage: true,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        I have over three years of experience as a Software Engineer, working in both the education and banking sectors. My work includes developing website solutions, APIs, and automation tasks. <br/><br/>I am proficient in C#, HTML, JavaScript, CSS, Angular, TypeScript, Blazor, Restful API’s (C#), ASP.NET Framework, .NET (3–9), Git, Troubleshooting and Debugging, Azure CI/CD pipelines, Azure Cloud Services (Resource groups, Function Apps, Cosmos DB, Virtual Machines, Key Vaults, Containers, Virtual Networks, Subnets, SQL Databases etc.…), Infrastructure as Code (IaC), Microsoft Message Queuing (MSMQ).
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Tools & Technologies',
+    Svg: '/img/TOOLS.png',
+    isImage: true,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Visual Studio-2022, SQL Server Management Studio, Visual Studio Code, Notepad++, Azure DevOps, Octopus deploy, TeamCity, Cyberark, Splunk, Dynatrace, Docfusion, Postman, Azure Portal, GitHub, GitLab, Bruno, Docker.
       </>
     ),
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({title, Svg, isImage, description}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        {isImage ? (
+          <img src={Svg as string} className={styles.featureSvg} alt={title} />
+        ) : (
+          // @ts-ignore - We know Svg is a component when isImage is false
+          <Svg className={styles.featureSvg} role="img" />
+        )}
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>

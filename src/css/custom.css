@@ -6,25 +6,197 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #0072CE; /* Rich blue color */
+  --ifm-color-primary-dark: #0066B8;
+  --ifm-color-primary-darker: #005BAD;
+  --ifm-color-primary-darkest: #004C99;
+  --ifm-color-primary-light: #0080E3;
+  --ifm-color-primary-lighter: #0091FF;
+  --ifm-color-primary-lightest: #1A9FFF;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-background-color: #f5f8fb; /* Slight blue tint for light mode */
+  --ifm-navbar-background-color: #ffffff;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #3694FF;
+  --ifm-color-primary-dark: #1A85FF;
+  --ifm-color-primary-darker: #0A7CFF;
+  --ifm-color-primary-darkest: #006BE8;
+  --ifm-color-primary-light: #52A3FF;
+  --ifm-color-primary-lighter: #6CACFF;
+  --ifm-color-primary-lightest: #94C5FF;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-background-color: #090c14; /* Rich dark blue-black background */
+  --ifm-navbar-background-color: #101935; /* Rich blue color matching bottom of gradient */
+  --ifm-footer-background-color: #101935; /* Rich blue color matching bottom of gradient */
+}
+
+/* Add a rich gradient background in dark mode */
+[data-theme='dark'] body {
+  background: linear-gradient(135deg, #090c14 0%, #0f172a 50%, #101935 100%);
+}
+
+/* Add subtle texture to the background */
+[data-theme='dark'] body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-image: 
+    radial-gradient(rgba(66, 123, 255, 0.1) 1px, transparent 1px);
+  background-size: 30px 30px;
+  z-index: -1;
+}
+
+/* Enhanced card styling for dark mode */
+[data-theme='dark'] .card {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Enhanced styles for features section */
+.features {
+  padding: 2rem 0;
+  width: 100%;
+}
+
+[data-theme='dark'] .features {
+  position: relative;
+  z-index: 1;
+}
+
+/* Blue highlight for headings in dark mode */
+[data-theme='dark'] h1, 
+[data-theme='dark'] h2, 
+[data-theme='dark'] h3 {
+  color: var(--ifm-color-primary-light);
+  text-shadow: 0 0 5px rgba(54, 148, 255, 0.3);
+}
+
+/* Style improvements for feature images */
+.featureSvg {
+  height: 200px;
+  width: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+[data-theme='dark'] .featureSvg {
+  box-shadow: 0 4px 15px rgba(54, 148, 255, 0.3);
+}
+
+.featureSvg:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(54, 148, 255, 0.5);
+}
+
+/* Add glow effect to buttons in dark mode */
+[data-theme='dark'] .button--primary {
+  box-shadow: 0 0 10px rgba(54, 148, 255, 0.5);
+}
+
+[data-theme='dark'] .button--primary:hover {
+  box-shadow: 0 0 20px rgba(54, 148, 255, 0.7);
+}
+
+/* Enhanced navbar styling in dark mode */
+[data-theme='dark'] .navbar {
+  border-bottom: 1px solid rgba(54, 148, 255, 0.3);
+  background-color: #101935 !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Logo styling in the navbar */
+.navbar__logo {
+  height: 2.5rem;
+  margin-right: 0.5rem;
+}
+
+[data-theme='dark'] .navbar__logo img {
+  filter: drop-shadow(0 0 8px rgba(54, 148, 255, 0.5));
+  transition: filter 0.3s ease;
+}
+
+[data-theme='dark'] .navbar__brand:hover .navbar__logo img {
+  filter: drop-shadow(0 0 12px rgba(54, 148, 255, 0.8));
+}
+
+/* Make navbar items stand out better against blue background */
+[data-theme='dark'] .navbar__item {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+  padding: 0.5rem 1rem;
+  margin: 0 0.2rem;
+  border-radius: 4px;
+}
+
+[data-theme='dark'] .navbar__item:hover {
+  color: #fff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+  background-color: rgba(54, 148, 255, 0.2);
+}
+
+/* Active navbar item */
+[data-theme='dark'] .navbar__item.navbar__link--active {
+  color: #ffffff;
+  font-weight: 600;
+  background-color: rgba(54, 148, 255, 0.3);
+}
+
+/* Add blue glow to search bar in dark mode */
+[data-theme='dark'] .navbar__search-input {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(54, 148, 255, 0.3);
+  box-shadow: 0 0 10px rgba(54, 148, 255, 0.1);
+}
+
+/* Enhanced code blocks with blue accent in dark mode */
+[data-theme='dark'] pre {
+  background-color: rgba(13, 18, 30, 0.8) !important;
+  border: 1px solid rgba(54, 148, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Page transitions */
+.container {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ensure footer matches navbar color exactly */
+[data-theme='dark'] .footer {
+  background-color: #101935 !important;
+  border-top: 1px solid rgba(54, 148, 255, 0.3);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Add a subtle blue highlight to links in the footer */
+[data-theme='dark'] .footer__link-item {
+  color: var(--ifm-color-primary-light);
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+[data-theme='dark'] .footer__link-item:hover {
+  color: #fff;
+  text-shadow: 0 0 8px rgba(54, 148, 255, 0.8);
+  text-decoration: none;
 }
