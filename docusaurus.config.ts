@@ -91,6 +91,11 @@ const config: Config = {
           label: 'GitHub',
           position: 'right',
         },
+        {
+          href: 'https://youtube.com/@mongezikasha',
+          label: 'YouTube',
+          position: 'right',
+        },
       ],
     },
     footer: {
