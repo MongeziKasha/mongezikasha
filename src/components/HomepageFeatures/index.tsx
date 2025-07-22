@@ -30,7 +30,7 @@ const FeatureList: FeatureItem[] = [
     isImage: true,
     description: (
       <>
-        I have over three years of experience as a Software Engineer, working in both the education and banking sectors. My work includes developing website solutions, APIs, and automation tasks. <br/><br/>I am proficient in C#, HTML, JavaScript, CSS, Angular, TypeScript, Blazor, Restful API’s (C#), ASP.NET Framework, .NET (3–9), Git, Troubleshooting and Debugging, Azure CI/CD pipelines, Azure Cloud Services (Resource groups, Function Apps, Cosmos DB, Virtual Machines, Key Vaults, Containers, Virtual Networks, Subnets, SQL Databases etc.…), Infrastructure as Code (IaC), Microsoft Message Queuing (MSMQ).
+        I am proficient in developing website solutions, APIs, and automation tasks within the education and banking sectors.
       </>
     ),
   },
