@@ -96,6 +96,11 @@ const config: Config = {
           label: 'YouTube',
           position: 'right',
         },
+        {
+          href: 'https://www.linkedin.com/in/mongezi-kasha-72947716a/',
+          label: 'LinkedIn',
+          position: 'right',
+        },
       ],
     },
     footer: {
