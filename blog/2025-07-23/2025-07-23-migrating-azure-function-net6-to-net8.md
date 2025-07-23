@@ -406,5 +406,3 @@ If you're still running on .NET 6, I highly recommend making the jump to .NET 8.
 - Picture generation is from ChatGPT 4.0
 
 ---
-
-*Have you migrated your Azure Functions to .NET 8 yet? Share your experience in the comments below! 👇*
