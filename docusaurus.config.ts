@@ -86,6 +86,7 @@ const config: Config = {
           label: 'Tutorial',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
+        {to: '/youtube', label: 'YouTube', position: 'left'},
         {
           href: 'https://github.com/MongeziKasha',
           label: 'GitHub',
@@ -93,7 +94,7 @@ const config: Config = {
         },
         {
           href: 'https://youtube.com/@mongezikasha',
-          label: 'YouTube',
+          label: 'Channel',
           position: 'right',
         },
         {

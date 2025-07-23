@@ -1,0 +1,307 @@
+/* YouTube page styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.header h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #ff0000, #ff4444);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--ifm-color-emphasis-700);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.channelActions {
+  margin-bottom: 2rem;
+}
+
+.subscribeButton {
+  display: inline-block;
+  background: #ff0000;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+}
+
+.subscribeButton:hover {
+  background: #cc0000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 0, 0, 0.4);
+  color: white;
+  text-decoration: none;
+}
+
+.main {
+  margin-bottom: 3rem;
+}
+
+.videosGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.videoCard {
+  background: var(--ifm-card-background-color);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--ifm-global-shadow-lw);
+  transition: all 0.3s ease;
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.videoCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--ifm-global-shadow-md);
+}
+
+.videoLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.videoLink:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.thumbnailContainer {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: #000;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.videoCard:hover .thumbnail {
+  transform: scale(1.05);
+}
+
+.duration {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.playButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 0, 0, 0.9);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.videoCard:hover .playButton {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.videoInfo {
+  padding: 1.5rem;
+}
+
+.videoTitle {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.4;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.videoDescription {
+  color: var(--ifm-color-emphasis-600);
+  margin: 0 0 1rem 0;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.videoMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.publishDate {
+  color: var(--ifm-color-emphasis-500);
+  font-size: 0.85rem;
+}
+
+.viewCount {
+  color: var(--ifm-color-emphasis-500);
+  font-size: 0.85rem;
+}
+
+.loading {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.spinner {
+  border: 4px solid var(--ifm-color-emphasis-200);
+  border-top: 4px solid #ff0000;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.errorMessage {
+  text-align: center;
+  padding: 2rem;
+  background: var(--ifm-color-warning-light);
+  border: 1px solid var(--ifm-color-warning);
+  border-radius: 8px;
+  margin: 2rem 0;
+}
+
+.setupInstructions {
+  text-align: left;
+  max-width: 600px;
+  margin: 2rem auto 0;
+  padding: 1.5rem;
+  background: var(--ifm-card-background-color);
+  border-radius: 8px;
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.setupInstructions h3 {
+  margin-top: 0;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.setupInstructions ol {
+  margin: 1rem 0;
+}
+
+.setupInstructions li {
+  margin: 0.5rem 0;
+  line-height: 1.5;
+}
+
+.setupInstructions code {
+  background: var(--ifm-color-emphasis-100);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+.setupInstructions a {
+  color: #ff0000;
+  text-decoration: none;
+}
+
+.setupInstructions a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem 0;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-emphasis-600);
+}
+
+.footer a {
+  color: #ff0000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem 0.5rem;
+  }
+  
+  .header h1 {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+  
+  .videosGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .videoCard {
+    margin: 0 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .subscribeButton {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .thumbnailContainer {
+    height: 180px;
+  }
+  
+  .videoInfo {
+    padding: 1rem;
+  }
+}
