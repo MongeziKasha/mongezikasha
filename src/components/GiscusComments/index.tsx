@@ -17,7 +17,7 @@ export default function GiscusComments(): React.JSX.Element {
       reactionsEnabled="1"
       emitMetadata="0"
       inputPosition="top"
-      theme={colorMode}
+      theme={colorMode === 'dark' ? 'dark_dimmed' : 'light'}
       lang="en"
       loading="lazy"
     />

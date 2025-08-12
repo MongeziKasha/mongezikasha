@@ -29,29 +29,54 @@
   --ifm-color-primary-lighter: #6CACFF;
   --ifm-color-primary-lightest: #94C5FF;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-  --ifm-background-color: #090c14; /* Rich dark blue-black background */
-  --ifm-navbar-background-color: #101935; /* Rich blue color matching bottom of gradient */
-  --ifm-footer-background-color: #101935; /* Rich blue color matching bottom of gradient */
+  --ifm-background-color: #0f172a; 
+  --ifm-navbar-background-color: #0f172a; 
+  --ifm-footer-background-color: #0f172a; 
 }
 
-/* Add a rich gradient background in dark mode */
+
 [data-theme='dark'] body {
-  background: linear-gradient(135deg, #090c14 0%, #0f172a 50%, #101935 100%);
+  background: #0f172a !important;
+  background-image: none !important;
 }
 
-/* Add subtle texture to the background */
+
+[data-theme='dark'] *,
+[data-theme='dark'] html,
+[data-theme='dark'] body,
+[data-theme='dark'] #__docusaurus,
+[data-theme='dark'] .main-wrapper,
+[data-theme='dark'] main,
+[data-theme='dark'] .container,
+[data-theme='dark'] .container-fluid,
+[data-theme='dark'] .row,
+[data-theme='dark'] .col,
+[data-theme='dark'] article,
+[data-theme='dark'] .markdown,
+[data-theme='dark'] .blog-wrapper,
+[data-theme='dark'] .theme-blog-wrapper,
+[data-theme='dark'] .theme-doc-markdown,
+[data-theme='dark'] .theme-blog-list-page-main,
+[data-theme='dark'] .theme-blog-post-page-main {
+  background: #0f172a !important;
+  background-image: none !important;
+}
+
+
+[data-theme='dark'] .theme-doc-markdown,
+[data-theme='dark'] .theme-blog-list-page-main,
+[data-theme='dark'] .theme-blog-post-page-main {
+  background: transparent !important;
+}
+
+
+[data-theme='dark'] section {
+  background: transparent !important;
+}
+
+
 [data-theme='dark'] body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  background-image: 
-    radial-gradient(rgba(66, 123, 255, 0.1) 1px, transparent 1px);
-  background-size: 30px 30px;
-  z-index: -1;
+  display: none;
 }
 
 /* Enhanced card styling for dark mode */
@@ -110,7 +135,7 @@
 /* Enhanced navbar styling in dark mode */
 [data-theme='dark'] .navbar {
   border-bottom: 1px solid rgba(54, 148, 255, 0.3);
-  background-color: #101935 !important;
+  background-color: #0f172a !important;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
@@ -184,7 +209,7 @@
 
 /* Ensure footer matches navbar color exactly */
 [data-theme='dark'] .footer {
-  background-color: #101935 !important;
+  background-color: #0f172a !important;
   border-top: 1px solid rgba(54, 148, 255, 0.3);
   box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
 }
@@ -199,4 +224,42 @@
   color: #fff;
   text-shadow: 0 0 8px rgba(54, 148, 255, 0.8);
   text-decoration: none;
+}
+
+/* Ensure Giscus comments section matches dark theme */
+[data-theme='dark'] .giscus,
+[data-theme='dark'] .giscus-frame {
+  background: transparent !important;
+}
+
+/* Style the comments container */
+[data-theme='dark'] .giscus {
+  border-radius: 8px;
+  padding: 1rem;
+  background: rgba(15, 23, 42, 0.3) !important;
+  border: 1px solid rgba(54, 148, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Ensure blog post paginator has consistent background */
+[data-theme='dark'] .pagination-nav {
+  background: transparent !important;
+}
+
+[data-theme='dark'] .pagination-nav__item {
+  background: rgba(15, 23, 42, 0.6) !important;
+  border: 1px solid rgba(54, 148, 255, 0.2);
+}
+
+[data-theme='dark'] .pagination-nav__item:hover {
+  background: rgba(54, 148, 255, 0.2) !important;
+}
+
+/* Fix any remaining background inconsistencies */
+[data-theme='dark'] .theme-doc-breadcrumbs,
+[data-theme='dark'] .theme-doc-toc-desktop,
+[data-theme='dark'] .theme-doc-sidebar-container,
+[data-theme='dark'] .theme-blog-sidebar,
+[data-theme='dark'] .theme-blog-tags-list-page {
+  background: transparent !important;
 }
