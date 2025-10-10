@@ -14,7 +14,7 @@ Then one day, I realized maybe I was a little too comfortable.
 
 I spoke to my mentor, okay self-proclaimed mentor, about my frustrations and the fact that I was starting to feel stuck. He hit me with something that stuck: “Maybe it’s time you try consulting.”
 
-So, I did what any millennial/Gen Z mix would do, I Googled the hell out of “What does a software engineer consultant actually do?”
+So, I did what any software engineer would do, I Googled the hell out of “What does a software engineer consultant actually do?”
 
 And the more I read, the more I liked it. Then suddenly, like the universe or maybe my ancestors were eavesdropping, I started seeing more consultants popping up in my organization. Coincidence? I think not. My ancestors were working overtime that week.
 
