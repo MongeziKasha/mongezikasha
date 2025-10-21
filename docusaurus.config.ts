@@ -79,12 +79,7 @@ const config: Config = {
         src: 'img/logo.png',
       },
       items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Tutorial',
-        },
+        {to: '/docs/projects', label: 'Projects', position: 'left'},
         {to: '/blog', label: 'Blog', position: 'left'},
         {to: '/youtube', label: 'YouTube', position: 'left'},
         {
@@ -107,15 +102,6 @@ const config: Config = {
     footer: {
       style: 'dark',
       links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
-          ],
-        },
         {
           title: 'Community',
           items: [
