@@ -88,6 +88,16 @@ const config: Config = {
           position: 'right',
         },
         {
+          href: 'https://www.codewars.com/users/mo_kasha',
+          label: 'CodeWars',
+          position: 'right',
+        },
+        {
+          href: 'https://leetcode.com/u/mongezikasha/',
+          label: 'LeetCode',
+          position: 'right',
+        },
+        {
           href: 'https://youtube.com/@mongezikasha',
           label: 'Channel',
           position: 'right',
@@ -129,6 +139,14 @@ const config: Config = {
             {
               label: 'GitHub',
               href: 'https://github.com/MongeziKasha',
+            },
+            {
+              label: 'CodeWars',
+              href: 'https://www.codewars.com/users/mo_kasha',
+            },
+            {
+              label: 'LeetCode',
+              href: 'https://leetcode.com/u/mongezikasha/',
             },
           ],
         },
