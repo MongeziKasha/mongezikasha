@@ -139,15 +139,7 @@ const config: Config = {
             {
               label: 'GitHub',
               href: 'https://github.com/MongeziKasha',
-            },
-            {
-              label: 'CodeWars',
-              href: 'https://www.codewars.com/users/mo_kasha',
-            },
-            {
-              label: 'LeetCode',
-              href: 'https://leetcode.com/u/mongezikasha/',
-            },
+            }
           ],
         },
       ],
